@@ -4,12 +4,25 @@
     font-family: 'Merriweather', serif;
 }
 
+body{
+  max-width: 1920px;
+}
+
 nav{
+    width: 100%;
     height: 150px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
+label{
+    display: none;
+}
+#toggle{
+    display: none;
+}
+
 .logo-bloc{
     width: 310px;
     display: flex;
@@ -33,10 +46,16 @@ nav{
 .logo-title{
     margin-top: 25px;
 }
+.responsive{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 menu{
     display: flex;
-    width: 600px;
-    justify-content: space-between;
+    width: 50%;
+    justify-content: space-around;
     align-items: center;
     font-size: 12px;
 }
@@ -162,4 +181,68 @@ menu{
     position:absolute;
     margin-top: 300px;
 
+}
+
+@media screen and (max-width: 1430px) {
+
+    .article-bloc{
+        flex-direction: column;
+        width: 100%;
+        height: 1550px;
+    }
+    .text{
+        width: 100%;
+        height: 700px;
+        margin-bottom: 200px;
+    } 
+    .responsive{
+        width: 70%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    menu{
+        width: 60%;
+    }
+  }
+
+@media screen and (max-width: 1180px) {
+
+    .responsive{
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    label 
+    {
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        font-size: 40px;
+        color: #EA6D27;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    #toggle:checked + menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 250px;
+        width: 160px;
+        position: absolute;
+        margin-top: 70px;
+    }
+
+    menu {
+        display: none;
+
+    }
+    .reservez{
+        display: none;
+    }
 }
